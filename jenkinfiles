@@ -1,0 +1,9 @@
+timestamps {
+
+node () {
+
+	stage ('stage1 - Checkout') {
+ 	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/nikhilsr0070/pipeline-freestyle.git']]]) 
+	}
+}
+}
